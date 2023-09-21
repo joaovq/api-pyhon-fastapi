@@ -8,5 +8,5 @@ class Sale(Base):
     id = schema.Column(types.Integer, primary_key=True, index=True)
     value = schema.Column(types.Double)
     created_at = schema.Column(type_=types.TIMESTAMP, server_default=func.now())
-    person_id = schema.Column(types.Integer, schema.ForeignKey('person.id'))
+    person_id = schema.Column(types.Integer, schema.ForeignKey('person_1.id'))
     person = relationship('Person', back_populates='sales') 

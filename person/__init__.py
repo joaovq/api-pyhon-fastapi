@@ -1,1 +1,1 @@
-from .person import person
+from .person import router

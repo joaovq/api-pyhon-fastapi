@@ -1,28 +1,27 @@
 from dataclasses import dataclass
+from typing import Union
 
-@dataclass
+@dataclass()
 class Token:
     access_token: str
     token_type: str
 
-@dataclass
+@dataclass()
 class TokenData:
-    username: str | None = None
+    username: Union[str,None] = None
 
-@dataclass
+@dataclass()
 class User:
     username: str
-    email: str | None = None
+    email: Union[str,None] = None
     
 @dataclass
-class UserCreate:
-    name: str
-    username: str
-    email: str | None = None
-    password: str
+class UserCreate(User):
+    name: str = ""
+    password: str = ""
 
 class UserInDB(User):
-    hashed_password: str
+    password: str
     
     
 def get_user(db, username: str):

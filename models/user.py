@@ -9,4 +9,4 @@ class User(Base):
     username = sm.Column(types.String, unique=True)
     password = sm.Column(types.String)
     email = sm.Column(types.String, unique=True)
-    is_active = sm.Column(types.Boolean, default=False)
+    is_active = sm.Column(types.Boolean, default=True)
