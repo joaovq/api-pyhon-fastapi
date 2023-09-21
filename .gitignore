@@ -1,0 +1,6 @@
+./sql_app.sqlite
+*.sqlite
+.venv
+.vscode
+__pycache__
+.pytest_cache
