@@ -13,6 +13,13 @@ class TokenData:
 class User:
     username: str
     email: str | None = None
+    
+@dataclass
+class UserCreate:
+    name: str
+    username: str
+    email: str | None = None
+    password: str
 
 class UserInDB(User):
     hashed_password: str
