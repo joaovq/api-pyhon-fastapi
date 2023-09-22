@@ -1,13 +1,12 @@
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
+from fastapi import status 
 from main import app
-from unittest import TestCase
 
 
 client = TestClient(app)
 
 
-def test_read_main():
-    response = client.get("/")
-    assert response.status_code == 200
-    assert response.json() == {"message": "Hello World"}
+def test_root_get_is_status_code_401_unauthorized():
+    response = client.get('/')
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED
