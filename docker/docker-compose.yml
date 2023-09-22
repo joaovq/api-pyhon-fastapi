@@ -11,14 +11,14 @@ services:
     cpus: 5
     mem_limit: 8
     env_file:
-      - ./.env
+      - ../.env
     expose:
       - 8000:8000
   pgsql:
     image: postgres:13-alpine
     volumes:
-      - ./data/postgres/data:/var/lib/postgresql/data/
+      - ../data/postgres/data:/var/lib/postgresql/data/
     ports:
       - 35432:5432
     env_file:
-      - ./.env
+      - ../.env
