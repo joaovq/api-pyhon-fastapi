@@ -4,4 +4,6 @@
 .vscode
 __pycache__
 .pytest_cache
+.env-dev
+.env-local
 .env
