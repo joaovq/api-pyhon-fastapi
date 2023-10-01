@@ -13,7 +13,7 @@ services:
     cpus: 0.5
     mem_limit: 512m
     env_file:
-      - ./.env
+      - ./.env-dev
     # Important
     ports:
       - 8000:8000
@@ -24,7 +24,7 @@ services:
     ports:
       - 35432:5432
     env_file:
-      - ./.env
+      - ./.env-dev
   # service:
   #   image: nginx
   #   deploy:
