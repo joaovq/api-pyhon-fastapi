@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Union
 
 @dataclass()
@@ -23,7 +24,9 @@ class UserCreate(User):
 class UserInDB(User):
     password: str
     
-    
+class Subscription(User):
+    montly_fee: float
+    start_date: datetime
 def get_user(db, username: str):
     if username in db:
         user_dict = db[username]
